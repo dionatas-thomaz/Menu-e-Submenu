@@ -1,0 +1,113 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+.menu {
+  background-color: #1e1e2f;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.menu ul li {
+  position: relative;
+}
+
+.menu a {
+  display: block;
+  padding: 15px 25px;
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.menu a:hover {
+  background-color: #333;
+}
+
+.has-submenu .submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  display: none;
+  flex-direction: column;
+  min-width: 180px;
+  z-index: 1000;
+}
+
+.has-submenu:hover .submenu {
+  display: flex;
+}
+
+.submenu li a {
+  padding: 12px 20px;
+  color: #fff;
+  border-top: 1px solid #444;
+}
+
+.submenu li a:hover {
+  background-color: #555;
+}
+
+main {
+  padding: 40px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+button:hover {
+  background-color: #388E3C;
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: #1e1e2f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #4CAF50;
+}
