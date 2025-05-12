@@ -1,113 +1,93 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background: #f9f9f9;
-  color: #333;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e6f2e6;
+  color: #003366;
 }
 
-.menu {
-  background-color: #1e1e2f;
+nav {
+  width: 200px;
+  height: 100vh;
+  background-color: #006400; /* verde escuro */
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding-top: 20px;
 }
 
-.menu ul {
-  display: flex;
+nav ul {
   list-style: none;
-  justify-content: center;
+  padding: 0;
 }
 
-.menu ul li {
+nav ul li {
   position: relative;
 }
 
-.menu a {
+nav ul li a {
   display: block;
-  padding: 15px 25px;
-  color: #fff;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.menu a:hover {
-  background-color: #333;
-}
-
-.has-submenu .submenu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #333;
-  display: none;
-  flex-direction: column;
-  min-width: 180px;
-  z-index: 1000;
-}
-
-.has-submenu:hover .submenu {
-  display: flex;
-}
-
-.submenu li a {
   padding: 12px 20px;
   color: #fff;
-  border-top: 1px solid #444;
+  text-decoration: none;
+  transition: background-color 0.3s;
 }
 
-.submenu li a:hover {
-  background-color: #555;
+nav ul li a:hover {
+  background-color: #228B22; /* verde médio */
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  left: 200px;
+  top: 0;
+  background-color: #ffd700; /* amarelo */
+  min-width: 160px;
+}
+
+nav ul li:hover .submenu {
+  display: block;
+}
+
+.submenu a {
+  color: #000;
 }
 
 main {
-  padding: 40px;
-  text-align: center;
-}
-
-h1 {
-  margin-bottom: 20px;
-  font-size: 32px;
-}
-
-p {
-  margin: 10px 0;
-  font-size: 16px;
+  margin-left: 220px;
+  padding: 20px;
 }
 
 button {
   padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
+  background-color: #0000CD; /* azul médio */
+  color: #fff;
   border: none;
-  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
   cursor: pointer;
-  margin-top: 20px;
-  transition: transform 0.3s, background 0.3s;
 }
 
 button:hover {
-  background-color: #388E3C;
+  background-color: #1E90FF;
   transform: scale(1.05);
 }
 
 footer {
-  background-color: #1e1e2f;
-  color: white;
   text-align: center;
-  padding: 20px;
-  margin-top: 40px;
+  padding: 10px;
+  background-color: #006400;
+  color: #fff;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-left: 220px;
 }
 
 footer a {
-  color: white;
+  color: #ffd700;
   margin: 0 10px;
-  font-size: 20px;
-  transition: color 0.3s;
-}
-
-footer a:hover {
-  color: #4CAF50;
+  text-decoration: none;
 }
