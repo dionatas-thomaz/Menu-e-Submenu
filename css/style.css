@@ -1,21 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
-  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #e6f2e6;
-  color: #003366;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+.tudo {
+  flex: 1;
+  display: flex;
 }
 
 nav {
-  width: 200px;
-  height: 100vh;
-  background-color: #006400; /* verde escuro */
-  position: fixed;
-  left: 0;
-  top: 0;
-  padding-top: 20px;
+  width: 220px;
+  background-color: #054d2b; 
+  color: white;
+  padding: 20px 10px;
 }
 
 nav ul {
@@ -27,67 +29,78 @@ nav ul li {
   position: relative;
 }
 
-nav ul li a {
+nav a {
   display: block;
-  padding: 12px 20px;
-  color: #fff;
+  padding: 10px;
+  color: white;
   text-decoration: none;
-  transition: background-color 0.3s;
 }
 
-nav ul li a:hover {
-  background-color: #228B22; /* verde médio */
+nav a:hover {
+  background-color: #f6bb0a; 
+  color: black;
+  transition: 0.3s;
 }
 
 .submenu {
   display: none;
   position: absolute;
-  left: 200px;
+  left: 100%;
   top: 0;
-  background-color: #ffd700; /* amarelo */
-  min-width: 160px;
+  background-color: #0a4275;
+  min-width: 180px;
 }
 
-nav ul li:hover .submenu {
+nav li:hover .submenu {
   display: block;
 }
 
-.submenu a {
-  color: #000;
+.menu {
+  flex: 1;
+  padding: 30px;
+  background-color: #f2f2f2;
 }
 
-main {
-  margin-left: 220px;
-  padding: 20px;
+.botao {
+  text-align: center;
+  margin-top: 20px;
 }
 
-button {
-  padding: 10px 20px;
-  background-color: #0000CD; /* azul médio */
-  color: #fff;
+.botao button {
+  background-color: #112f41;
   border: none;
-  transition: background-color 0.3s, transform 0.3s;
+  padding: 10px 20px;
   cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+  color: white;
 }
 
-button:hover {
-  background-color: #1E90FF;
-  transform: scale(1.05);
+.botao button:hover {
+  background-color: #d8a600;
 }
 
 footer {
+  background-color: #112f41;
+  color: white;
+  padding: 15px;
   text-align: center;
-  padding: 10px;
-  background-color: #006400;
-  color: #fff;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  margin-left: 220px;
+  margin-top: auto;
+}
+
+footer  {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 10px;
 }
 
 footer a {
-  color: #ffd700;
-  margin: 0 10px;
-  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+footer .redes a:hover {
+  color: #f6bb0a;
 }
