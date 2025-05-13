@@ -1,4 +1,4 @@
-
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
 body {
   margin: 0;
   padding: 0;
@@ -39,7 +39,7 @@ nav a {
 nav a:hover {
   background-color: #f6bb0a; 
   color: black;
-  transition: 0.3s;
+  transition: 0.8s;
 }
 
 .submenu {
