@@ -14,13 +14,11 @@ body {
 }
 
 .menu-icon {
-  position: fixed;
   top: 15px;
   background-color: #054d2b;
   color: white;
   padding: 10px 12px;
   font-size: 20px;
-  border-radius: 4px;
   z-index: 1000;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -48,7 +46,7 @@ body {
  {
   list-style: none;
   padding: 0;
-  margin-top: 40px;
+  margin-top:0px;
 }
 
 .sidebar ul li {
