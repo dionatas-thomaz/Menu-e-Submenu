@@ -1,81 +1,109 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: 'Roboto', sans-serif;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  position: fixed;
+  top: 15px;
+  background-color: #054d2b;
+  color: white;
+  padding: 10px 12px;
+  font-size: 20px;
+  border-radius: 4px;
+  z-index: 1000;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.menu-icon:hover {
+  background-color: #0a4275;
 }
 
 .tudo {
-  flex: 1;
   display: flex;
+  transition: margin-left 0.3s ease;
 }
 
-nav {
+.sidebar {
   width: 220px;
-  background-color: #054d2b; 
+  background-color: #054d2b;
   color: white;
   padding: 20px 10px;
+  height: 100vh;
+  transition: width 0.3s ease;
+  overflow-x: hidden;
 }
 
-nav ul {
+.sidebar ul
+ {
   list-style: none;
   padding: 0;
+  margin-top: 40px;
 }
 
-nav ul li {
+.sidebar ul li {
   position: relative;
 }
 
-nav a {
-  display: block;
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   padding: 10px;
   color: white;
   text-decoration: none;
+  white-space: nowrap;
 }
 
-nav a:hover {
-  background-color: #f6bb0a; 
+.sidebar a:hover {
+  background-color: #f6bb0a;
   color: black;
-  transition: 0.8s;
-}
+  transition: 0.3s;}
 
 .submenu {
-  display: none;
-  position: absolute;
-  left: 100%;
-  top: 0;
-  background-color: #0a4275;
-  min-width: 180px;
+    display: none;
+    position: absolute;
+    left: 0;          
+    top: 0px;       
+    background-color: #0a4275;
+    width: 100%;      
+    z-index: 1000;    
+    border-radius: 0 0 4px 4px; 
 }
 
-nav li:hover .submenu {
-  display: block;
-}
+.sidebar li:hover > .submenu {
+    display: block;}
 
 .menu {
   flex: 1;
   padding: 30px;
   background-color: #f2f2f2;
+  transition: margin-left 0.3s ease;
 }
 
 .botao {
   text-align: center;
   margin-top: 20px;
 }
-
 .botao button {
   background-color: #112f41;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   font-size: 16px;
-  transition: 0.3s;
   color: white;
+  transition: background-color 0.3s;
 }
-
 .botao button:hover {
   background-color: #d8a600;
 }
@@ -87,20 +115,34 @@ footer {
   text-align: center;
   margin-top: auto;
 }
-
-footer  {
+footer .redes {
   display: flex;
   justify-content: center;
   gap: 15px;
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
-
-footer a {
+footer .redes a {
   color: white;
   font-size: 20px;
   transition: color 0.3s;
 }
-
 footer .redes a:hover {
   color: #f6bb0a;
+}
+
+.link-text {
+  transition: opacity 0.3s ease;
+}
+
+#menu-toggle:checked ~ .tudo .sidebar {
+  width: 60px;
+  padding-left: 0;
+  padding-right: 0;
+}
+#menu-toggle:checked ~ .tudo .sidebar .link-text {
+  opacity: 0;
+  pointer-events: none;
+}
+#menu-toggle:checked ~ .tudo .sidebar .submenu {
+  display: none;
 }
